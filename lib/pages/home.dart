@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -22,37 +23,23 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: ListView(
-          children: [
-            MyBox(
-                "What is Flutter?",
-                "an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.",
-                "https://cdn.pixabay.com/photo/2021/12/01/15/37/advent-season-6838288_960_720.jpg"),
-            SizedBox(
-              height: 20,
-            ),
-            MyBox(
-                "Trusted by many",
-                "Flutter is supported and used by Google, trusted by well-known brands around the world, and maintained by a community of global developers.",
-                "https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_960_720.jpg"),
-            SizedBox(
-              height: 20,
-            ),
-            MyBox(
-                "Transform your workflow",
-                "Take control of your codebase with automated testing, developer tooling, and everything else you need to build production-quality apps.",
-                "https://cdn.pixabay.com/photo/2017/11/04/19/05/christmas-2918569_960_720.jpg"),
-            SizedBox(
-              height: 20,
-            ),
-          ],
-        ),
+        child: FutureBuilder(
+          builder: (context, snapshot){
+            var data = json.decode(snapshot.data.toString());
+            return ListView.builder(itemBuilder: (BuildContext context, int index) {
+              return MyBox(data[index]['title'], data[index]['subtitle'], data[index]['image']);
+            },
+            itemCount: data.length,);
+          },
+          future: DefaultAssetBundle.of(context).loadString('assets/data.json'),
+        )
       ),
     );
   }
 
   Widget MyBox(String title, String subtitle, String image) {
     return Container(
+      margin: EdgeInsets.only(top:20),
       padding: EdgeInsets.all(20),
       height: 180,
       decoration: BoxDecoration(
