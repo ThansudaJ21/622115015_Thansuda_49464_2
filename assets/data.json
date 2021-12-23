@@ -2,16 +2,19 @@
     {
         "title": "What is Flutter?",
         "subtitle": "an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.",
-        "image": "https://cdn.pixabay.com/photo/2021/12/01/15/37/advent-season-6838288_960_720.jpg"
+        "image": "https://cdn.pixabay.com/photo/2021/12/01/15/37/advent-season-6838288_960_720.jpg",
+        "details": "The first version of Flutter was known by the codename Sky and ran on the Android operating system. It was unveiled at the 2015 Dart developer summit[6] with the stated intent of being able to render consistently at 120 frames per second.[7] During the keynote of Google Developer Days in Shanghai in September 2018, Google announced Flutter Release Preview 2, which is the last big release before Flutter 1.0. On December 4th of that year, Flutter 1.0 was released at the Flutter Live event, denoting the first stable version of the Framework. On December 11, 2019, Flutter 1.12 was released at the Flutter Interactive event."
     },
     {
         "title": "Trusted by many",
         "subtitle": "Flutter is supported and used by Google, trusted by well-known brands around the world, and maintained by a community of global developers.",
-        "image": "https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_960_720.jpg"
+        "image": "https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_960_720.jpg",
+        "details": "From packages and plugins to friendly developers, find all of the resources you need to be successful with Flutter."
     },
     {
         "title": "Transform your workflow",
         "subtitle": "Take control of your codebase with automated testing, developer tooling, and everything else you need to build production-quality apps.",
-        "image": "https://cdn.pixabay.com/photo/2017/11/04/19/05/christmas-2918569_960_720.jpg"
+        "image": "https://cdn.pixabay.com/photo/2017/11/04/19/05/christmas-2918569_960_720.jpg",
+        "details": "Flutter transforms the app development process so you can ship more, faster. Deploy to six targets from a single codebase."
     }
 ]
